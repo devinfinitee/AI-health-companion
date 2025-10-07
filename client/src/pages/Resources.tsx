@@ -1,12 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Search, Mic, Brain, Heart, Dumbbell, Book } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import gsap from "gsap";
 
 export default function Resources() {
   const [search, setSearch] = useState("");
+  const headerRef = useRef<HTMLDivElement>(null);
+  const personalizedRef = useRef<HTMLDivElement>(null);
+  const popularRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.from(headerRef.current, {
+          opacity: 0,
+          y: -30,
+          duration: 0.6,
+          ease: "power2.out"
+        });
+      }
+
+      const personalizedCards = personalizedRef.current?.querySelectorAll(".card-item");
+      if (personalizedCards && personalizedCards.length > 0) {
+        gsap.from(personalizedCards, {
+          opacity: 0,
+          y: 30,
+          stagger: 0.15,
+          duration: 0.6,
+          delay: 0.2,
+          ease: "power2.out"
+        });
+      }
+
+      const popularCards = popularRef.current?.querySelectorAll(".card-item");
+      if (popularCards && popularCards.length > 0) {
+        gsap.from(popularCards, {
+          opacity: 0,
+          y: 30,
+          stagger: 0.1,
+          duration: 0.6,
+          delay: 0.4,
+          ease: "power2.out"
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   // todo: remove mock functionality
   const personalizedArticles = [
@@ -43,7 +86,7 @@ export default function Resources() {
   return (
     <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="mb-8">
+        <div className="mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">Health Resources</h1>
           <p className="text-muted-foreground mb-6">Knowledge for a healthier you</p>
 
@@ -67,13 +110,13 @@ export default function Resources() {
           </div>
         </div>
 
-        <div className="mb-8">
+        <div className="mb-8" ref={personalizedRef}>
           <h2 className="font-heading font-semibold text-xl mb-4">Personalized for You</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {personalizedArticles.map((article) => {
               const Icon = article.icon;
               return (
-                <Card key={article.id} className="hover-elevate cursor-pointer" data-testid={`card-article-${article.id}`}>
+                <Card key={article.id} className="card-item hover-elevate cursor-pointer" data-testid={`card-article-${article.id}`}>
                   <CardContent className="pt-6">
                     <div className="flex flex-col items-center text-center gap-4">
                       <div className={`w-16 h-16 rounded-full ${article.color} flex items-center justify-center`}>
@@ -94,11 +137,11 @@ export default function Resources() {
           </div>
         </div>
 
-        <div>
+        <div ref={popularRef}>
           <h2 className="font-heading font-semibold text-xl mb-4">Popular Articles</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {popularArticles.map((article) => (
-              <Card key={article.id} className="hover-elevate cursor-pointer" data-testid={`card-popular-${article.id}`}>
+              <Card key={article.id} className="card-item hover-elevate cursor-pointer" data-testid={`card-popular-${article.id}`}>
                 <CardContent className="pt-6">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">

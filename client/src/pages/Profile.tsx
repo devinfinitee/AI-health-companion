@@ -11,19 +11,51 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function Profile() {
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.from(headerRef.current, {
+          opacity: 0,
+          y: -30,
+          duration: 0.6,
+          ease: "power2.out"
+        });
+      }
+
+      const cards = cardsRef.current?.querySelectorAll(".card-item");
+      if (cards && cards.length > 0) {
+        gsap.from(cards, {
+          opacity: 0,
+          y: 30,
+          stagger: 0.15,
+          duration: 0.6,
+          delay: 0.2,
+          ease: "power2.out"
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">Profile Settings</h1>
           <p className="text-muted-foreground">Personalized Guidance, Simplified Care</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6" ref={cardsRef}>
           {/* Account Information */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg flex items-center gap-2">
                 <User className="w-5 h-5" />
@@ -54,7 +86,7 @@ export default function Profile() {
           </Card>
 
           {/* Language & Region */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg flex items-center gap-2">
                 <Globe className="w-5 h-5" />
@@ -92,7 +124,7 @@ export default function Profile() {
           </Card>
 
           {/* Notification Preferences */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg flex items-center gap-2">
                 <Bell className="w-5 h-5" />
@@ -125,7 +157,7 @@ export default function Profile() {
           </Card>
 
           {/* Voice Assistant */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg flex items-center gap-2">
                 <Volume2 className="w-5 h-5" />

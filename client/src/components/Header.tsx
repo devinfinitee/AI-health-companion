@@ -1,9 +1,13 @@
-import { Activity } from "lucide-react";
+import { Activity, Home } from "lucide-react";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import { Button } from "@/components/ui/button";
 import ThemeToggle from "./ThemeToggle";
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 
 export default function Header() {
+  const [location] = useLocation();
+  const isHome = location === "/";
+
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-card backdrop-blur-lg bg-card/95">
       <div className="flex h-16 items-center justify-between px-4 md:px-6 max-w-7xl mx-auto">
@@ -17,6 +21,14 @@ export default function Header() {
         </Link>
         
         <div className="flex items-center gap-3">
+          {!isHome && (
+            <Link href="/">
+              <Button variant="ghost" size="sm" data-testid="button-go-home">
+                <Home className="w-4 h-4 mr-2" />
+                <span className="hidden sm:inline">Home</span>
+              </Button>
+            </Link>
+          )}
           <ThemeToggle />
           <Link href="/profile">
             <Avatar className="cursor-pointer w-9 h-9" data-testid="button-profile">

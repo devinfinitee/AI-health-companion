@@ -1,9 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Send, Mic } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useLocation } from "wouter";
+import gsap from "gsap";
 
 interface Message {
   id: string;
@@ -21,6 +22,46 @@ export default function Chat() {
     },
   ]);
   const [input, setInput] = useState("");
+  const chatRef = useRef<HTMLDivElement>(null);
+  const actionsRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const chatMessages = chatRef.current?.querySelectorAll("[data-testid^='message-']");
+      if (chatMessages && chatMessages.length > 0) {
+        gsap.from(chatMessages, {
+          opacity: 0,
+          y: 20,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: "power2.out"
+        });
+      }
+
+      if (actionsRef.current) {
+        gsap.from(actionsRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.5,
+          delay: 0.3,
+          ease: "power2.out"
+        });
+      }
+
+      if (inputRef.current) {
+        gsap.from(inputRef.current, {
+          opacity: 0,
+          y: 20,
+          duration: 0.5,
+          delay: 0.4,
+          ease: "power2.out"
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   const handleSend = () => {
     if (!input.trim()) return;
@@ -50,7 +91,7 @@ export default function Chat() {
 
   return (
     <div className="flex flex-col h-[calc(100vh-8rem)] md:h-[calc(100vh-4rem)]">
-      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4">
+      <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4" ref={chatRef}>
         {messages.map((message) => (
           <div
             key={message.id}
@@ -81,7 +122,7 @@ export default function Chat() {
       </div>
 
       {/* Quick Actions */}
-      <div className="px-4 py-3 border-t">
+      <div className="px-4 py-3 border-t" ref={actionsRef}>
         <p className="text-sm text-muted-foreground mb-2">Quick Actions</p>
         <div className="flex flex-wrap gap-2">
           {quickActions.map((action, index) => (
@@ -99,7 +140,7 @@ export default function Chat() {
       </div>
 
       {/* Input Area */}
-      <div className="border-t p-4">
+      <div className="border-t p-4" ref={inputRef}>
         <div className="flex gap-2 max-w-4xl mx-auto">
           <Input
             value={input}

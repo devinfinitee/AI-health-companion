@@ -1,16 +1,46 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "@/components/ui/calendar";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { useLocation } from "wouter";
+import gsap from "gsap";
 
 export default function BookAppointment() {
   const [, setLocation] = useLocation();
   const [date, setDate] = useState<Date>();
   const [selectedTime, setSelectedTime] = useState<string>();
   const [reason, setReason] = useState("");
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardsRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.from(headerRef.current, {
+          opacity: 0,
+          y: -30,
+          duration: 0.6,
+          ease: "power2.out"
+        });
+      }
+
+      const cards = cardsRef.current?.querySelectorAll(".card-item");
+      if (cards && cards.length > 0) {
+        gsap.from(cards, {
+          opacity: 0,
+          y: 30,
+          stagger: 0.2,
+          duration: 0.6,
+          delay: 0.2,
+          ease: "power2.out"
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   const timeSlots = ["9:00 AM", "10:00 AM", "2:00 PM", "4:00 PM"];
   const reasonOptions = ["Follow-up", "New Concern", "Medication Review"];
@@ -25,16 +55,16 @@ export default function BookAppointment() {
   return (
     <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">
             Book an Appointment
           </h1>
           <p className="text-muted-foreground">Voice-guided navigation enabled</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid md:grid-cols-2 gap-6" ref={cardsRef}>
           {/* Date & Time Selection */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg">Date & Time</CardTitle>
             </CardHeader>
@@ -69,7 +99,7 @@ export default function BookAppointment() {
           </Card>
 
           {/* Reason for Visit */}
-          <Card>
+          <Card className="card-item">
             <CardHeader>
               <CardTitle className="font-heading text-lg">Reason for Visit</CardTitle>
             </CardHeader>
