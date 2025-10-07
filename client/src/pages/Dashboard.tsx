@@ -1,8 +1,10 @@
-import { Heart, Calendar, Book, Activity, Eye, Stethoscope } from "lucide-react";
+import { Heart, Calendar, Book, User } from "lucide-react";
 import { useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import VoiceButton from "@/components/VoiceButton";
 import HealthCard from "@/components/HealthCard";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
+import doctorImage from "@assets/Gemini_Generated_Image_ne4wtgne4wtgne4w_1759858661592.png";
 
 export default function Dashboard() {
   const [, setLocation] = useLocation();
@@ -15,27 +17,50 @@ export default function Dashboard() {
 
   return (
     <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
-      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
-        {/* Hero Section */}
-        <div className="text-center mb-12">
-          <h1 className="font-heading font-bold text-4xl md:text-5xl mb-4">
-            Your Partner in <span className="text-primary">Health.</span>
-            <br />
-            Health. Simplified.
-          </h1>
-          <p className="text-muted-foreground text-lg mb-8">
-            Voice-guided navigation for health, and personalized guidance
-          </p>
-          
-          <div className="flex justify-center mb-4">
-            <VoiceButton size="large" onActivate={() => setLocation("/chat")} />
-          </div>
-          <p className="text-sm text-muted-foreground">Talk to your AI Health Companion</p>
-        </div>
+      {/* Hero Section with Background */}
+      <div className="relative bg-gradient-to-br from-blue-50 via-purple-50 to-blue-100 dark:from-purple-950/20 dark:via-blue-950/20 dark:to-purple-950/20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 py-12 md:py-20">
+          <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Left Content */}
+            <div className="text-left">
+              <h1 className="font-heading font-bold text-4xl md:text-5xl lg:text-6xl mb-4 leading-tight">
+                Your Partner in <span className="text-primary">Health.</span>
+                <br />
+                Health. Simplified
+              </h1>
+              <p className="text-muted-foreground text-lg mb-8">
+                Voice-guided navigation for health, and
+              </p>
+              
+              <div className="flex items-center gap-4">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-primary/20 rounded-full blur-2xl"></div>
+                  <div className="relative">
+                    <VoiceButton size="large" onActivate={() => setLocation("/chat")} />
+                  </div>
+                </div>
+                <div>
+                  <p className="text-sm font-medium">Talk to your AI</p>
+                  <p className="text-sm text-muted-foreground">Health Companion</p>
+                </div>
+              </div>
+            </div>
 
+            {/* Right Image */}
+            <div className="hidden md:flex justify-end">
+              <img 
+                src={doctorImage} 
+                alt="Healthcare professionals" 
+                className="w-full max-w-lg rounded-2xl"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-8 md:py-12">
         {/* Dashboard Cards */}
         <div className="mb-12">
-          <h2 className="font-heading font-semibold text-2xl mb-6">Dashboard</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <HealthCard
               title="My Health Summary"
@@ -59,8 +84,8 @@ export default function Dashboard() {
         </div>
 
         {/* Quick Actions */}
-        <div>
-          <h2 className="font-heading font-semibold text-2xl mb-6">Quick Actions</h2>
+        <div className="mb-12">
+          <h2 className="font-heading font-semibold text-xl mb-4">Quick Actions</h2>
           <div className="flex flex-wrap gap-3">
             {quickActions.map((action) => (
               <Button
@@ -74,33 +99,29 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* Info Section */}
-        <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0">
-              <Activity className="w-5 h-5 text-primary" />
+        {/* Footer Info Section */}
+        <div className="border-t pt-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="flex items-start gap-4">
+              <Avatar className="w-12 h-12">
+                <AvatarFallback className="bg-primary text-primary-foreground">
+                  AI
+                </AvatarFallback>
+              </Avatar>
+              <div>
+                <h3 className="font-heading font-semibold mb-1">AI Health Companion</h3>
+                <p className="text-sm text-muted-foreground">24/7 personalized health guidance</p>
+              </div>
             </div>
             <div>
-              <h3 className="font-heading font-semibold mb-1">AI Health Companion</h3>
-              <p className="text-sm text-muted-foreground">24/7 personalized health guidance</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0">
-              <Stethoscope className="w-5 h-5 text-primary" />
+              <p className="text-sm font-medium mb-1">Choele Nkolifi Ronnev</p>
+              <p className="text-sm text-muted-foreground mb-1">Koron Cstibrn 02 ssmagsd</p>
+              <p className="text-sm text-muted-foreground">Bristol</p>
             </div>
             <div>
-              <h3 className="font-heading font-semibold mb-1">Expert Care</h3>
-              <p className="text-sm text-muted-foreground">Connect with healthcare professionals</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-4">
-            <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 flex-shrink-0">
-              <Eye className="w-5 h-5 text-primary" />
-            </div>
-            <div>
-              <h3 className="font-heading font-semibold mb-1">Track Progress</h3>
-              <p className="text-sm text-muted-foreground">Monitor your health journey</p>
+              <p className="text-sm font-medium mb-1">Hesolo msvpiscormot.com</p>
+              <p className="text-sm text-muted-foreground mb-1">Ostexdis 269 3283 7333</p>
+              <p className="text-sm text-muted-foreground">tomog bliostel's Companionsol.com</p>
             </div>
           </div>
         </div>
