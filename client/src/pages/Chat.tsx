@@ -5,6 +5,8 @@ import { Input } from "@/components/ui/input";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useLocation } from "wouter";
 import gsap from "gsap";
+import AnimatedPage from "@/components/AnimatedPage";
+import { motion } from "framer-motion";
 
 interface Message {
   id: string;
@@ -90,11 +92,14 @@ export default function Chat() {
   ];
 
   return (
-    <div className="flex flex-col h-[calc(100vh-8rem)] md:h-[calc(100vh-4rem)]">
+    <AnimatedPage className="flex flex-col h-[calc(100vh-8rem)] md:h-[calc(100vh-4rem)]">
       <div className="flex-1 overflow-y-auto px-4 py-6 space-y-4" ref={chatRef}>
-        {messages.map((message) => (
-          <div
+        {messages.map((message, index) => (
+          <motion.div
             key={message.id}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.1 }}
             className={`flex gap-3 ${message.type === "user" ? "justify-end" : "justify-start"}`}
             data-testid={`message-${message.type}-${message.id}`}
           >
@@ -110,20 +115,18 @@ export default function Chat() {
                   : "bg-muted"
               }`}
             >
-              <p className="text-sm">{message.content}</p>
             </div>
             {message.type === "user" && (
               <Avatar className="w-8 h-8">
                 <AvatarFallback className="bg-primary text-primary-foreground text-xs">U</AvatarFallback>
               </Avatar>
             )}
-          </div>
+          </motion.div>
         ))}
       </div>
 
       {/* Quick Actions */}
       <div className="px-4 py-3 border-t" ref={actionsRef}>
-        <p className="text-sm text-muted-foreground mb-2">Quick Actions</p>
         <div className="flex flex-wrap gap-2">
           {quickActions.map((action, index) => (
             <Button
@@ -158,6 +161,6 @@ export default function Chat() {
           </Button>
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

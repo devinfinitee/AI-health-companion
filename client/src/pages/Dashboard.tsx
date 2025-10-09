@@ -7,6 +7,7 @@ import doctorImage from "@assets/Gemini_Generated_Image_ne4wtgne4wtgne4w_1759860
 import { Mic } from "lucide-react";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import AnimatedPage from "@/components/AnimatedPage";
 
 export default function Dashboard() {
   const [, setLocation] = useLocation();
@@ -103,7 +104,7 @@ export default function Dashboard() {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
+    <AnimatedPage className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       {/* Hero Section with Background */}
       <div className="relative bg-gradient-to-br from-blue-100 via-purple-100 to-blue-200 dark:from-purple-950/30 dark:via-blue-950/30 dark:to-purple-950/30 overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-12 md:py-16">
@@ -235,6 +236,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

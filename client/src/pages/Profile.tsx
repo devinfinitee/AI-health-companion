@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/select";
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import AnimatedPage from "@/components/AnimatedPage";
 
 export default function Profile() {
   const headerRef = useRef<HTMLDivElement>(null);
@@ -46,7 +47,7 @@ export default function Profile() {
   }, []);
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
+    <AnimatedPage className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-4xl mx-auto px-4 py-8">
         <div className="text-center mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">Profile Settings</h1>
@@ -197,6 +198,6 @@ export default function Profile() {
           </Button>
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

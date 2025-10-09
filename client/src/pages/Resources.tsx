@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import gsap from "gsap";
+import AnimatedPage from "@/components/AnimatedPage";
 
 export default function Resources() {
   const [search, setSearch] = useState("");
@@ -84,7 +85,7 @@ export default function Resources() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
+    <AnimatedPage className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-6xl mx-auto px-4 py-8">
         <div className="mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">Health Resources</h1>
@@ -162,6 +163,6 @@ export default function Resources() {
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

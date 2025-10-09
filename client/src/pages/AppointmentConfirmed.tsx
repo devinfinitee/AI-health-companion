@@ -3,9 +3,53 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { useLocation } from "wouter";
+import AnimatedPage from "@/components/AnimatedPage";
+import { motion } from "framer-motion";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
 
 export default function AppointmentConfirmed() {
   const [, setLocation] = useLocation();
+  const headerRef = useRef<HTMLDivElement>(null);
+  const cardRef = useRef<HTMLDivElement>(null);
+  const listRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      if (headerRef.current) {
+        gsap.from(headerRef.current, {
+          opacity: 0,
+          scale: 0.8,
+          duration: 0.6,
+          ease: "back.out(1.7)"
+        });
+      }
+
+      if (cardRef.current) {
+        gsap.from(cardRef.current, {
+          opacity: 0,
+          y: 30,
+          duration: 0.6,
+          delay: 0.3,
+          ease: "power2.out"
+        });
+      }
+
+      const listItems = listRef.current?.querySelectorAll(".appointment-item");
+      if (listItems && listItems.length > 0) {
+        gsap.from(listItems, {
+          opacity: 0,
+          x: -30,
+          stagger: 0.1,
+          duration: 0.5,
+          delay: 0.5,
+          ease: "power2.out"
+        });
+      }
+    });
+
+    return () => ctx.revert();
+  }, []);
 
   // todo: remove mock functionality
   const upcomingAppointments = [
@@ -15,9 +59,9 @@ export default function AppointmentConfirmed() {
   ];
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
+    <AnimatedPage className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-3xl mx-auto px-4 py-8">
-        <div className="text-center mb-8">
+        <div className="text-center mb-8" ref={headerRef}>
           <div className="flex justify-center mb-4">
             <CheckCircle2 className="w-16 h-16 text-primary" />
           </div>
@@ -26,7 +70,7 @@ export default function AppointmentConfirmed() {
           </h1>
         </div>
 
-        <Card className="mb-8 border-primary/20 bg-primary/5">
+        <Card className="mb-8 border-primary/20 bg-primary/5" ref={cardRef}>
           <CardContent className="pt-6">
             <div className="flex items-start gap-4">
               <div className="flex items-center justify-center w-12 h-12 rounded-full bg-primary/20">
@@ -59,11 +103,11 @@ export default function AppointmentConfirmed() {
           </CardContent>
         </Card>
 
-        <div className="mb-6">
+        <div className="mb-6" ref={listRef}>
           <h2 className="font-heading font-semibold text-xl mb-4">Upcoming Appointments</h2>
           <div className="space-y-3">
             {upcomingAppointments.map((apt) => (
-              <Card key={apt.id} className="hover-elevate" data-testid={`card-appointment-${apt.id}`}>
+              <Card key={apt.id} className="appointment-item hover-elevate" data-testid={`card-appointment-${apt.id}`}>
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-4">
                     <Avatar className="w-12 h-12">
@@ -96,6 +140,6 @@ export default function AppointmentConfirmed() {
           Back to Dashboard
         </Button>
       </div>
-    </div>
+    </AnimatedPage>
   );
 }

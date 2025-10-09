@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle } from "lucide-react";
 import { useLocation } from "wouter";
 import gsap from "gsap";
+import AnimatedPage from "@/components/AnimatedPage";
+import { motion } from "framer-motion";
 
 export default function Symptoms() {
   const [, setLocation] = useLocation();
@@ -73,7 +75,7 @@ export default function Symptoms() {
   };
 
   return (
-    <div className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
+    <AnimatedPage className="min-h-[calc(100vh-8rem)] md:min-h-[calc(100vh-4rem)] pb-20 md:pb-8">
       <div className="max-w-3xl mx-auto px-4 py-8">
         <div className="text-center mb-8" ref={headerRef}>
           <h1 className="font-heading font-bold text-3xl md:text-4xl mb-3">Symptom Checker</h1>
@@ -155,6 +157,6 @@ export default function Symptoms() {
           </Card>
         )}
       </div>
-    </div>
+    </AnimatedPage>
   );
 }
