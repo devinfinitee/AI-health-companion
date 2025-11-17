@@ -1,0 +1,105 @@
+{
+  "app.name": "Compañero de Salud IA",
+  "app.tagline": "Tu Socio en Salud. Salud. Simplificada",
+  
+  "nav.home": "Inicio",
+  "nav.chat": "Chat",
+  "nav.symptoms": "Síntomas",
+  "nav.appointments": "Citas",
+  "nav.resources": "Recursos",
+  "nav.profile": "Perfil",
+  "nav.logout": "Cerrar Sesión",
+  
+  "landing.hero.title": "Tu Socio en Salud.",
+  "landing.hero.subtitle": "Salud. Simplificada",
+  "landing.hero.description": "Experimenta la atención médica como nunca antes con nuestro compañero de salud impulsado por IA. Obtén información de salud personalizada, reserva citas y gestiona tu viaje de bienestar, todo en un solo lugar.",
+  "landing.hero.getStarted": "Comenzar",
+  "landing.hero.signIn": "Iniciar Sesión",
+  
+  "landing.features.title": "Todo lo que Necesitas para una Mejor Salud",
+  "landing.features.subtitle": "Herramientas integrales de gestión de salud diseñadas para hacer tu viaje de atención médica sin problemas y sin estrés",
+  
+  "landing.feature.aiCompanion.title": "Compañero de Salud IA",
+  "landing.feature.aiCompanion.description": "Chatea con nuestro asistente de IA inteligente para obtener orientación y apoyo de salud instantáneos las 24 horas",
+  
+  "landing.feature.appointments.title": "Citas Fáciles",
+  "landing.feature.appointments.description": "Reserva y gestiona citas con proveedores de atención médica sin problemas con recordatorios de WhatsApp",
+  
+  "landing.feature.tracking.title": "Seguimiento de Salud",
+  "landing.feature.tracking.description": "Monitorea tus métricas de salud y obtén información personalizada para mejorar tu bienestar",
+  
+  "landing.feature.resources.title": "Recursos de Salud",
+  "landing.feature.resources.description": "Accede a una biblioteca de artículos de salud confiables, consejos y contenido educativo",
+  
+  "landing.feature.secure.title": "Seguro y Privado",
+  "landing.feature.secure.description": "Tus datos de salud están encriptados y protegidos con estándares de seguridad líderes en la industria",
+  
+  "landing.feature.family.title": "Cuidado Familiar",
+  "landing.feature.family.description": "Gestiona los registros de salud de toda tu familia desde un solo panel",
+  
+  "landing.cta.title": "¿Listo para Transformar tu Viaje de Salud?",
+  "landing.cta.subtitle": "Únete a miles de usuarios que confían en nosotros para sus necesidades de atención médica",
+  "landing.cta.button": "Crea tu Cuenta Gratis",
+  
+  "landing.footer.copyright": "© 2024 Compañero de Salud IA. Todos los derechos reservados.",
+  
+  "auth.signup.title": "Crear Cuenta",
+  "auth.signup.subtitle": "Únete a nosotros y comienza tu viaje de salud hoy",
+  "auth.signup.fullName": "Nombre Completo",
+  "auth.signup.email": "Correo Electrónico",
+  "auth.signup.password": "Contraseña",
+  "auth.signup.confirmPassword": "Confirmar Contraseña",
+  "auth.signup.passwordHint": "Debe tener al menos 8 caracteres",
+  "auth.signup.button": "Crear Cuenta",
+  "auth.signup.hasAccount": "¿Ya tienes una cuenta?",
+  "auth.signup.signInLink": "Iniciar sesión",
+  "auth.signup.backToHome": "Volver al Inicio",
+  
+  "auth.login.title": "Bienvenido de Nuevo",
+  "auth.login.subtitle": "Inicia sesión para continuar tu viaje de salud",
+  "auth.login.email": "Correo Electrónico",
+  "auth.login.password": "Contraseña",
+  "auth.login.forgotPassword": "¿Olvidaste tu contraseña?",
+  "auth.login.rememberMe": "Recuérdame",
+  "auth.login.button": "Iniciar Sesión",
+  "auth.login.orContinue": "O continuar con",
+  "auth.login.google": "Google",
+  "auth.login.facebook": "Facebook",
+  "auth.login.noAccount": "¿No tienes una cuenta?",
+  "auth.login.signUpLink": "Registrarse",
+  "auth.login.backToHome": "Volver al Inicio",
+  
+  "dashboard.greeting": "Bienvenido de nuevo",
+  "dashboard.healthSummary": "Mi Resumen de Salud",
+  "dashboard.healthSummary.description": "Ver actividad reciente",
+  "dashboard.bookAppointment": "Reservar una Cita",
+  "dashboard.bookAppointment.description": "Programa tu próxima visita, recibe recordatorios por WhatsApp",
+  "dashboard.healthResources": "Recursos de Salud",
+  "dashboard.healthResources.description": "Explora artículos y consejos",
+  "dashboard.symptomChecker": "Verificador de Síntomas",
+  "dashboard.viewAppointments": "Ver Citas",
+  "dashboard.profileSettings": "Configuración de Perfil",
+  "dashboard.quickActions": "Acciones Rápidas",
+  "dashboard.talkToAI": "Habla con tu Compañero de Salud IA",
+  
+  "voice.listening": "Escuchando...",
+  "voice.speak": "Toca para hablar",
+  "voice.processing": "Procesando...",
+  "voice.tapToRead": "Toca para leer en voz alta",
+  "voice.stopReading": "Detener lectura",
+  
+  "error.fillAllFields": "Por favor completa todos los campos",
+  "error.invalidEmail": "Por favor proporciona un correo electrónico válido",
+  "error.passwordTooShort": "La contraseña debe tener al menos 8 caracteres",
+  "error.passwordMismatch": "Las contraseñas no coinciden",
+  "error.loginFailed": "Correo electrónico o contraseña inválidos. Por favor intenta de nuevo.",
+  "error.signupFailed": "Error al crear la cuenta. Por favor intenta de nuevo.",
+  "error.networkError": "Error de red. Por favor verifica tu conexión.",
+  
+  "success.accountCreated": "Tu cuenta ha sido creada exitosamente",
+  "success.loginSuccess": "Has iniciado sesión exitosamente",
+  "success.welcomeBack": "¡Bienvenido de nuevo!",
+  
+  "language.select": "Seleccionar Idioma",
+  "language.current": "Idioma Actual"
+}

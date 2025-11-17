@@ -1,0 +1,105 @@
+{
+  "app.name": "Mai Taimakon Lafiya na AI",
+  "app.tagline": "Abokin Ku A Cikin Lafiya. Lafiya. Mai Sauƙi",
+  
+  "nav.home": "Gida",
+  "nav.chat": "Tattaunawa",
+  "nav.symptoms": "Alamomi",
+  "nav.appointments": "Alƙawura",
+  "nav.resources": "Kayan Aiki",
+  "nav.profile": "Bayani",
+  "nav.logout": "Fita",
+  
+  "landing.hero.title": "Abokin Ku A Cikin Lafiya.",
+  "landing.hero.subtitle": "Lafiya. Mai Sauƙi",
+  "landing.hero.description": "Ku sami ƙwarewar kula da lafiya kamar yadda ba a taɓa gani ba tare da mai taimakon lafiya na AI. Ku sami bayanan lafiya na musamman, ku shirya alƙawura, kuma ku sarrafa tafiyar lafiyar ku—duk a wuri ɗaya.",
+  "landing.hero.getStarted": "Fara",
+  "landing.hero.signIn": "Shiga",
+  
+  "landing.features.title": "Duk Abin Da Kuke Buƙata Don Lafiya Mai Kyau",
+  "landing.features.subtitle": "Kayan aikin sarrafa lafiya cikakku waɗanda aka ƙera don sanya tafiyar kula da lafiyar ku mai sauƙi kuma ba tare da damuwa ba",
+  
+  "landing.feature.aiCompanion.title": "Mai Taimakon Lafiya na AI",
+  "landing.feature.aiCompanion.description": "Yi tattaunawa da mai taimakon AI mai hankali don samun jagora da tallafi na lafiya nan take koyaushe",
+  
+  "landing.feature.appointments.title": "Alƙawura Mai Sauƙi",
+  "landing.feature.appointments.description": "Ku shirya kuma ku sarrafa alƙawura tare da masu ba da kulawar lafiya ba tare da matsala ba tare da tunatarwa ta WhatsApp",
+  
+  "landing.feature.tracking.title": "Bin Diddigin Lafiya",
+  "landing.feature.tracking.description": "Ku lura da ma'aunin lafiyar ku kuma ku sami bayanan da aka keɓance don inganta lafiyar ku",
+  
+  "landing.feature.resources.title": "Kayan Aikin Lafiya",
+  "landing.feature.resources.description": "Samun damar ɗakin karatu na labarai na lafiya abin dogara, shawarwari da abun ciki na ilimi",
+  
+  "landing.feature.secure.title": "Amintacce & Sirri",
+  "landing.feature.secure.description": "Bayanan lafiyar ku an ɓoye kuma an kiyaye su tare da ƙa'idodin tsaro mafi girma a masana'antu",
+  
+  "landing.feature.family.title": "Kulawar Iyali",
+  "landing.feature.family.description": "Ku sarrafa bayanan lafiya na dukan dangin ku daga dashboard ɗaya",
+  
+  "landing.cta.title": "Kuna Shirye Don Canza Tafiyar Lafiyar Ku?",
+  "landing.cta.subtitle": "Ku haɗu da dubban masu amfani waɗanda suke amincewa da mu don buƙatun kulawar lafiyar su",
+  "landing.cta.button": "Ƙirƙiri Asusun Ku Kyauta",
+  
+  "landing.footer.copyright": "© 2024 Mai Taimakon Lafiya na AI. Duk haƙƙoƙi an kiyaye.",
+  
+  "auth.signup.title": "Ƙirƙiri Asusu",
+  "auth.signup.subtitle": "Ku haɗu da mu kuma ku fara tafiyar lafiyar ku yau",
+  "auth.signup.fullName": "Cikakken Suna",
+  "auth.signup.email": "Imel",
+  "auth.signup.password": "Kalmar Sirri",
+  "auth.signup.confirmPassword": "Tabbatar da Kalmar Sirri",
+  "auth.signup.passwordHint": "Dole ne ya zama aƙalla haruffa takwas",
+  "auth.signup.button": "Ƙirƙiri Asusu",
+  "auth.signup.hasAccount": "Kuna da asusu?",
+  "auth.signup.signInLink": "Shiga",
+  "auth.signup.backToHome": "Koma Gida",
+  
+  "auth.login.title": "Maraba Da Dawowa",
+  "auth.login.subtitle": "Ku shiga don ci gaba da tafiyar lafiyar ku",
+  "auth.login.email": "Imel",
+  "auth.login.password": "Kalmar Sirri",
+  "auth.login.forgotPassword": "Kun manta da kalmar sirri?",
+  "auth.login.rememberMe": "Ku tuna da ni",
+  "auth.login.button": "Shiga",
+  "auth.login.orContinue": "Ko ci gaba da",
+  "auth.login.google": "Google",
+  "auth.login.facebook": "Facebook",
+  "auth.login.noAccount": "Ba ku da asusu?",
+  "auth.login.signUpLink": "Yi rajista",
+  "auth.login.backToHome": "Koma Gida",
+  
+  "dashboard.greeting": "Maraba da dawowa",
+  "dashboard.healthSummary": "Taƙaitaccen Bayani Na Lafiya",
+  "dashboard.healthSummary.description": "Duba ayyukan kwanan nan",
+  "dashboard.bookAppointment": "Shirya Alƙawari",
+  "dashboard.bookAppointment.description": "Shirya ziyarar ku ta gaba, ku sami tunatarwa ta WhatsApp",
+  "dashboard.healthResources": "Kayan Aikin Lafiya",
+  "dashboard.healthResources.description": "Bincika labarai & shawarwari",
+  "dashboard.symptomChecker": "Mai Binciken Alamomi",
+  "dashboard.viewAppointments": "Duba Alƙawura",
+  "dashboard.profileSettings": "Saitunan Bayani",
+  "dashboard.quickActions": "Ayyuka Masu Sauri",
+  "dashboard.talkToAI": "Yi Magana Da Mai Taimakon Lafiya na AI",
+  
+  "voice.listening": "Ana saurare...",
+  "voice.speak": "Danna don yin magana",
+  "voice.processing": "Ana aiki...",
+  "voice.tapToRead": "Danna don karanta da babbar murya",
+  "voice.stopReading": "Dakatar da karantawa",
+  
+  "error.fillAllFields": "Don Allah cika duk wuraren",
+  "error.invalidEmail": "Don Allah bayar da adireshin imel mai inganci",
+  "error.passwordTooShort": "Kalmar sirri dole ta zama aƙalla haruffa takwas",
+  "error.passwordMismatch": "Kalmomin sirri ba su dace ba",
+  "error.loginFailed": "Imel ko kalmar sirri ba daidai ba. Don Allah sake gwadawa.",
+  "error.signupFailed": "An kasa ƙirƙirar asusu. Don Allah sake gwadawa.",
+  "error.networkError": "Kuskuren hanyar sadarwa. Don Allah duba haɗin ku.",
+  
+  "success.accountCreated": "An ƙirƙiri asusun ku cikin nasara",
+  "success.loginSuccess": "Kun shiga cikin nasara",
+  "success.welcomeBack": "Maraba da dawowa!",
+  
+  "language.select": "Zaɓi Harshe",
+  "language.current": "Harshen Yanzu"
+}

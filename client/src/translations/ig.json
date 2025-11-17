@@ -1,0 +1,105 @@
+{
+  "app.name": "Onye Enyemaka Ahụike AI",
+  "app.tagline": "Onye Mmekọ Gị Na Ahụike. Ahụike. Dị Mfe",
+  
+  "nav.home": "Ụlọ",
+  "nav.chat": "Mkparịta Ụka",
+  "nav.symptoms": "Mgbaàmà",
+  "nav.appointments": "Nhọpụta",
+  "nav.resources": "Ihe Eji Arụ Ọrụ",
+  "nav.profile": "Profaịlụ",
+  "nav.logout": "Pụọ",
+  
+  "landing.hero.title": "Onye Mmekọ Gị Na Ahụike.",
+  "landing.hero.subtitle": "Ahụike. Dị Mfe",
+  "landing.hero.description": "Nweta ahụmịhe nlekọta ahụike dị ka ọ dịbeghị mbụ site na onye enyemaka ahụike anyị nke AI na-eduzi. Nweta nghọta ahụike nke emere maka gị, debe nhọpụta, ma jikwaa njem ahụike gị—niile n'otu ebe.",
+  "landing.hero.getStarted": "Malite",
+  "landing.hero.signIn": "Banye",
+  
+  "landing.features.title": "Ihe Niile Ị Chọrọ Maka Ahụike Ka Mma",
+  "landing.features.subtitle": "Ngwa njikwa ahụike zuru oke emere iji mee ka njem nlekọta ahụike gị dị mfe ma ghara inwe nchegbu",
+  
+  "landing.feature.aiCompanion.title": "Onye Enyemaka Ahụike AI",
+  "landing.feature.aiCompanion.description": "Kparịta ụka na onye enyemaka AI anyị nwere ọgụgụ isi maka nduzi ahụike ozugbo na nkwado ụbọchị niile",
+  
+  "landing.feature.appointments.title": "Nhọpụta Dị Mfe",
+  "landing.feature.appointments.description": "Debe ma jikwaa nhọpụta na ndị na-enye nlekọta ahụike n'enweghị nsogbu site na ncheta WhatsApp",
+  
+  "landing.feature.tracking.title": "Nleba Anya Ahụike",
+  "landing.feature.tracking.description": "Lelee usoro ahụike gị ma nweta nghọta nke emere maka gị iji melite ahụike gị",
+  
+  "landing.feature.resources.title": "Ihe Eji Arụ Ọrụ Ahụike",
+  "landing.feature.resources.description": "Nweta ọbá akwụkwọ nke edemede ahụike a tụkwasịrị obi, ndụmọdụ na ọdịnaya mmụta",
+  
+  "landing.feature.secure.title": "Nchekwa & Nzuzo",
+  "landing.feature.secure.description": "Data ahụike gị bụ nke ezochiri ma chekwaa ya site na ụkpụrụ nchekwa kacha mma n'ụlọ ọrụ",
+  
+  "landing.feature.family.title": "Nlekọta Ezinụlọ",
+  "landing.feature.family.description": "Jikwaa ndekọ ahụike maka ezinụlọ gị niile site na otu dashboard",
+  
+  "landing.cta.title": "Ị Dị Njikere Ịgbanwe Njem Ahụike Gị?",
+  "landing.cta.subtitle": "Sonye ọtụtụ puku ndị ọrụ na-atụkwasị anyị obi maka mkpa nlekọta ahụike ha",
+  "landing.cta.button": "Mepụta Akaụntụ Gị N'efu",
+  
+  "landing.footer.copyright": "© 2024 Onye Enyemaka Ahụike AI. Ikike niile echekwara.",
+  
+  "auth.signup.title": "Mepụta Akaụntụ",
+  "auth.signup.subtitle": "Sonye anyị ma malite njem ahụike gị taa",
+  "auth.signup.fullName": "Aha Zuru Ezu",
+  "auth.signup.email": "Email",
+  "auth.signup.password": "Paswọọdụ",
+  "auth.signup.confirmPassword": "Kwenye Paswọọdụ",
+  "auth.signup.passwordHint": "Ọ ga-abụrịrị opekata mpe mkpụrụedemede asatọ",
+  "auth.signup.button": "Mepụta Akaụntụ",
+  "auth.signup.hasAccount": "Ị nwere akaụntụ?",
+  "auth.signup.signInLink": "Banye",
+  "auth.signup.backToHome": "Laghachi n'Ụlọ",
+  
+  "auth.login.title": "Nnọọ Ọzọ",
+  "auth.login.subtitle": "Banye iji gaa n'ihu na njem ahụike gị",
+  "auth.login.email": "Email",
+  "auth.login.password": "Paswọọdụ",
+  "auth.login.forgotPassword": "Ị chefuru paswọọdụ?",
+  "auth.login.rememberMe": "Cheta m",
+  "auth.login.button": "Banye",
+  "auth.login.orContinue": "Ma ọ bụ gaa n'ihu na",
+  "auth.login.google": "Google",
+  "auth.login.facebook": "Facebook",
+  "auth.login.noAccount": "Enweghị akaụntụ?",
+  "auth.login.signUpLink": "Debanye aha",
+  "auth.login.backToHome": "Laghachi n'Ụlọ",
+  
+  "dashboard.greeting": "Nnọọ ọzọ",
+  "dashboard.healthSummary": "Nchịkọta Ahụike M",
+  "dashboard.healthSummary.description": "Lee ihe omume na-adịbeghị anya",
+  "dashboard.bookAppointment": "Debe Nhọpụta",
+  "dashboard.bookAppointment.description": "Hazie nleta gị na-esote, nweta ncheta site na WhatsApp",
+  "dashboard.healthResources": "Ihe Eji Arụ Ọrụ Ahụike",
+  "dashboard.healthResources.description": "Chọpụta edemede & ndụmọdụ",
+  "dashboard.symptomChecker": "Onye Nlele Mgbaàmà",
+  "dashboard.viewAppointments": "Lee Nhọpụta",
+  "dashboard.profileSettings": "Ntọala Profaịlụ",
+  "dashboard.quickActions": "Omume Ngwa Ngwa",
+  "dashboard.talkToAI": "Gwa Onye Enyemaka Ahụike AI Gị Okwu",
+  
+  "voice.listening": "Na-ege ntị...",
+  "voice.speak": "Pịa ka ị kwuo okwu",
+  "voice.processing": "Na-edozi...",
+  "voice.tapToRead": "Pịa ka ị gụọ n'olu dara ụda",
+  "voice.stopReading": "Kwụsị ịgụ",
+  
+  "error.fillAllFields": "Biko dejupụta ebe niile",
+  "error.invalidEmail": "Biko nye adreesị email ziri ezi",
+  "error.passwordTooShort": "Paswọọdụ ga-abụrịrị opekata mpe mkpụrụedemede asatọ",
+  "error.passwordMismatch": "Paswọọdụ adabaghị",
+  "error.loginFailed": "Email ma ọ bụ paswọọdụ ezighi ezi. Biko nwaa ọzọ.",
+  "error.signupFailed": "Emepụtaghị akaụntụ. Biko nwaa ọzọ.",
+  "error.networkError": "Njehie netwọkụ. Biko lelee njikọ gị.",
+  
+  "success.accountCreated": "Emepụtala akaụntụ gị nke ọma",
+  "success.loginSuccess": "Ị banyela nke ọma",
+  "success.welcomeBack": "Nnọọ ọzọ!",
+  
+  "language.select": "Họrọ Asụsụ",
+  "language.current": "Asụsụ Ugbu A"
+}

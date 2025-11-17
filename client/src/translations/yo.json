@@ -1,0 +1,105 @@
+{
+  "app.name": "Olùrànlọ́wọ́ Ìlera AI",
+  "app.tagline": "Alábàáṣepọ̀ Rẹ Nínú Ìlera. Ìlera. Tó Rọrùn",
+  
+  "nav.home": "Ilé",
+  "nav.chat": "Ìbánisọ̀rọ̀",
+  "nav.symptoms": "Àwọn Àmì Àìsàn",
+  "nav.appointments": "Àwọn Ìpàdé",
+  "nav.resources": "Àwọn Ohun Èlò",
+  "nav.profile": "Àpèjúwe",
+  "nav.logout": "Jáde",
+  
+  "landing.hero.title": "Alábàáṣepọ̀ Rẹ Nínú Ìlera.",
+  "landing.hero.subtitle": "Ìlera. Tó Rọrùn",
+  "landing.hero.description": "Ní ìrírí ìtọ́jú ìlera bí kò ṣe ti rí rí pẹ̀lú olùrànlọ́wọ́ ìlera wa tí AI ń darí. Gba ìmọ̀ ìlera tí a ṣe fún ọ, ṣètò àwọn ìpàdé, kí o sì ṣàkóso ìrìnàjò ìlera rẹ—gbogbo rẹ̀ ní ibi kan.",
+  "landing.hero.getStarted": "Bẹ̀rẹ̀",
+  "landing.hero.signIn": "Wọlé",
+  
+  "landing.features.title": "Gbogbo Ohun Tí O Nílò Fún Ìlera Tó Dára",
+  "landing.features.subtitle": "Àwọn irinṣẹ́ ìṣàkóso ìlera tó pé tí a ṣe láti jẹ́ kí ìrìnàjò ìtọ́jú ìlera rẹ rọrùn kí ó sì wà láìsí ìdààmú",
+  
+  "landing.feature.aiCompanion.title": "Olùrànlọ́wọ́ Ìlera AI",
+  "landing.feature.aiCompanion.description": "Bá olùrànlọ́wọ́ AI wa tó ní ọgbọ́n sọ̀rọ̀ fún ìtọ́sọ́nà ìlera lẹ́sẹ̀kẹsẹ̀ àti ìrànlọ́wọ́ ní gbogbo ìgbà",
+  
+  "landing.feature.appointments.title": "Àwọn Ìpàdé Tó Rọrùn",
+  "landing.feature.appointments.description": "Ṣètò kí o sì ṣàkóso àwọn ìpàdé pẹ̀lú àwọn olùpèsè ìtọ́jú ìlera láìsí wàhálà pẹ̀lú àwọn ìrántí WhatsApp",
+  
+  "landing.feature.tracking.title": "Ìtọ́jú Ìlera",
+  "landing.feature.tracking.description": "Ṣàkóso àwọn ìwọ̀n ìlera rẹ kí o sì gba àwọn ìmọ̀ tí a ṣe fún ọ láti mu ìlera rẹ dára sí i",
+  
+  "landing.feature.resources.title": "Àwọn Ohun Èlò Ìlera",
+  "landing.feature.resources.description": "Wọlé sí ilé-ìkàwé àwọn àpilẹ̀kọ ìlera tó dára, àwọn ìmọ̀ràn àti àkóónú ẹ̀kọ́",
+  
+  "landing.feature.secure.title": "Tó Ní Ààbò & Ìkọ̀kọ̀",
+  "landing.feature.secure.description": "Dátà ìlera rẹ wà ní ìpamọ́ kí a sì dáàbò bò ó pẹ̀lú àwọn ìlànà ààbò tó ga jù lọ",
+  
+  "landing.feature.family.title": "Ìtọ́jú Ẹbí",
+  "landing.feature.family.description": "Ṣàkóso àwọn ìgbàsílẹ̀ ìlera fún gbogbo ẹbí rẹ láti orí pátákó kan ṣoṣo",
+  
+  "landing.cta.title": "Ṣe O Ti Ṣetán Láti Yí Ìrìnàjò Ìlera Rẹ Padà?",
+  "landing.cta.subtitle": "Darapọ̀ mọ́ ẹgbẹẹgbẹ̀rún àwọn olùlò tó gbẹ́kẹ̀lé wa fún àwọn ìnílò ìtọ́jú ìlera wọn",
+  "landing.cta.button": "Ṣẹ̀dá Àkáǹtì Ọ̀fẹ́ Rẹ",
+  
+  "landing.footer.copyright": "© 2024 Olùrànlọ́wọ́ Ìlera AI. Gbogbo ẹ̀tọ́ ni a dáàbò bò.",
+  
+  "auth.signup.title": "Ṣẹ̀dá Àkáǹtì",
+  "auth.signup.subtitle": "Darapọ̀ mọ́ wa kí o sì bẹ̀rẹ̀ ìrìnàjò ìlera rẹ lónìí",
+  "auth.signup.fullName": "Orúkọ Kíkún",
+  "auth.signup.email": "Ímeèlì",
+  "auth.signup.password": "Ọ̀rọ̀ Ìpamọ́",
+  "auth.signup.confirmPassword": "Jẹ́rìísí Ọ̀rọ̀ Ìpamọ́",
+  "auth.signup.passwordHint": "Ó gbọdọ̀ jẹ́ ó kéré tán ìṣúpọ̀ mẹ́jọ",
+  "auth.signup.button": "Ṣẹ̀dá Àkáǹtì",
+  "auth.signup.hasAccount": "Ṣé o ní àkáǹtì tẹ́lẹ̀?",
+  "auth.signup.signInLink": "Wọlé",
+  "auth.signup.backToHome": "Padà sí Ilé",
+  
+  "auth.login.title": "Káàbọ̀ Padà",
+  "auth.login.subtitle": "Wọlé láti tẹ̀síwájú ìrìnàjò ìlera rẹ",
+  "auth.login.email": "Ímeèlì",
+  "auth.login.password": "Ọ̀rọ̀ Ìpamọ́",
+  "auth.login.forgotPassword": "Ṣé o gbàgbé ọ̀rọ̀ ìpamọ́?",
+  "auth.login.rememberMe": "Rántí mi",
+  "auth.login.button": "Wọlé",
+  "auth.login.orContinue": "Tàbí tẹ̀síwájú pẹ̀lú",
+  "auth.login.google": "Google",
+  "auth.login.facebook": "Facebook",
+  "auth.login.noAccount": "Kò ní àkáǹtì?",
+  "auth.login.signUpLink": "Forúkọsílẹ̀",
+  "auth.login.backToHome": "Padà sí Ilé",
+  
+  "dashboard.greeting": "Káàbọ̀ padà",
+  "dashboard.healthSummary": "Àkópọ̀ Ìlera Mi",
+  "dashboard.healthSummary.description": "Wo ìṣe àìpẹ́",
+  "dashboard.bookAppointment": "Ṣètò Ìpàdé",
+  "dashboard.bookAppointment.description": "Ṣètò ìbẹ̀wò rẹ tó kàn, gba àwọn ìrántí nípa WhatsApp",
+  "dashboard.healthResources": "Àwọn Ohun Èlò Ìlera",
+  "dashboard.healthResources.description": "Ṣàwárí àwọn àpilẹ̀kọ & àwọn ìmọ̀ràn",
+  "dashboard.symptomChecker": "Olùṣàyẹ̀wò Àmì Àìsàn",
+  "dashboard.viewAppointments": "Wo Àwọn Ìpàdé",
+  "dashboard.profileSettings": "Àwọn Ètò Àpèjúwe",
+  "dashboard.quickActions": "Àwọn Ìgbésẹ̀ Kíákíá",
+  "dashboard.talkToAI": "Bá Olùrànlọ́wọ́ Ìlera AI Rẹ Sọ̀rọ̀",
+  
+  "voice.listening": "Ń gbọ́...",
+  "voice.speak": "Tẹ̀ láti sọ̀rọ̀",
+  "voice.processing": "Ń ṣiṣẹ́...",
+  "voice.tapToRead": "Tẹ̀ láti kà sókè",
+  "voice.stopReading": "Dá kíkà dúró",
+  
+  "error.fillAllFields": "Jọ̀wọ́ kún gbogbo àwọn àyè",
+  "error.invalidEmail": "Jọ̀wọ́ pèsè àdírẹ́ẹ̀sì ímeèlì tó tọ́",
+  "error.passwordTooShort": "Ọ̀rọ̀ ìpamọ́ gbọdọ̀ jẹ́ ó kéré tán ìṣúpọ̀ mẹ́jọ",
+  "error.passwordMismatch": "Àwọn ọ̀rọ̀ ìpamọ́ kò bá ara wọn mu",
+  "error.loginFailed": "Ímeèlì tàbí ọ̀rọ̀ ìpamọ́ tí kò tọ́. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
+  "error.signupFailed": "Kò ṣe é ṣẹ̀dá àkáǹtì. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
+  "error.networkError": "Àṣìṣe nẹ́tíwọ̀ọ̀kì. Jọ̀wọ́ ṣàyẹ̀wò ìsopọ̀ rẹ.",
+  
+  "success.accountCreated": "A ti ṣẹ̀dá àkáǹtì rẹ ní àṣeyọrí",
+  "success.loginSuccess": "O ti wọlé ní àṣeyọrí",
+  "success.welcomeBack": "Káàbọ̀ padà!",
+  
+  "language.select": "Yan Èdè",
+  "language.current": "Èdè Lọ́wọ́lọ́wọ́"
+}

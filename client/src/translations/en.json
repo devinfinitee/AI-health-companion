@@ -1,0 +1,105 @@
+{
+  "app.name": "AI Health Companion",
+  "app.tagline": "Your Partner in Health. Health. Simplified",
+  
+  "nav.home": "Home",
+  "nav.chat": "Chat",
+  "nav.symptoms": "Symptoms",
+  "nav.appointments": "Appointments",
+  "nav.resources": "Resources",
+  "nav.profile": "Profile",
+  "nav.logout": "Logout",
+  
+  "landing.hero.title": "Your Partner in Health.",
+  "landing.hero.subtitle": "Health. Simplified",
+  "landing.hero.description": "Experience healthcare like never before with our AI-powered health companion. Get personalized health insights, book appointments, and manage your wellness journey—all in one place.",
+  "landing.hero.getStarted": "Get Started",
+  "landing.hero.signIn": "Sign In",
+  
+  "landing.features.title": "Everything You Need for Better Health",
+  "landing.features.subtitle": "Comprehensive health management tools designed to make your healthcare journey seamless and stress-free",
+  
+  "landing.feature.aiCompanion.title": "AI Health Companion",
+  "landing.feature.aiCompanion.description": "Chat with our intelligent AI assistant for instant health guidance and support 24/7",
+  
+  "landing.feature.appointments.title": "Easy Appointments",
+  "landing.feature.appointments.description": "Book and manage appointments with healthcare providers seamlessly with WhatsApp reminders",
+  
+  "landing.feature.tracking.title": "Health Tracking",
+  "landing.feature.tracking.description": "Monitor your health metrics and get personalized insights to improve your wellness",
+  
+  "landing.feature.resources.title": "Health Resources",
+  "landing.feature.resources.description": "Access a library of trusted health articles, tips, and educational content",
+  
+  "landing.feature.secure.title": "Secure & Private",
+  "landing.feature.secure.description": "Your health data is encrypted and protected with industry-leading security standards",
+  
+  "landing.feature.family.title": "Family Care",
+  "landing.feature.family.description": "Manage health records for your entire family from a single dashboard",
+  
+  "landing.cta.title": "Ready to Transform Your Health Journey?",
+  "landing.cta.subtitle": "Join thousands of users who trust us with their healthcare needs",
+  "landing.cta.button": "Create Your Free Account",
+  
+  "landing.footer.copyright": "© 2024 AI Health Companion. All rights reserved.",
+  
+  "auth.signup.title": "Create Account",
+  "auth.signup.subtitle": "Join us and start your health journey today",
+  "auth.signup.fullName": "Full Name",
+  "auth.signup.email": "Email",
+  "auth.signup.password": "Password",
+  "auth.signup.confirmPassword": "Confirm Password",
+  "auth.signup.passwordHint": "Must be at least 8 characters long",
+  "auth.signup.button": "Create Account",
+  "auth.signup.hasAccount": "Already have an account?",
+  "auth.signup.signInLink": "Sign in",
+  "auth.signup.backToHome": "Back to Home",
+  
+  "auth.login.title": "Welcome Back",
+  "auth.login.subtitle": "Sign in to continue your health journey",
+  "auth.login.email": "Email",
+  "auth.login.password": "Password",
+  "auth.login.forgotPassword": "Forgot password?",
+  "auth.login.rememberMe": "Remember me",
+  "auth.login.button": "Sign In",
+  "auth.login.orContinue": "Or continue with",
+  "auth.login.google": "Google",
+  "auth.login.facebook": "Facebook",
+  "auth.login.noAccount": "Don't have an account?",
+  "auth.login.signUpLink": "Sign up",
+  "auth.login.backToHome": "Back to Home",
+  
+  "dashboard.greeting": "Welcome back",
+  "dashboard.healthSummary": "My Health Summary",
+  "dashboard.healthSummary.description": "View recent activity",
+  "dashboard.bookAppointment": "Book an Appointment",
+  "dashboard.bookAppointment.description": "Schedule next visit, get reminders via WhatsApp",
+  "dashboard.healthResources": "Health Resources",
+  "dashboard.healthResources.description": "Explore articles & tips",
+  "dashboard.symptomChecker": "Symptom Checker",
+  "dashboard.viewAppointments": "View Appointments",
+  "dashboard.profileSettings": "Profile Settings",
+  "dashboard.quickActions": "Quick Actions",
+  "dashboard.talkToAI": "Talk to your AI Health Companion",
+  
+  "voice.listening": "Listening...",
+  "voice.speak": "Tap to speak",
+  "voice.processing": "Processing...",
+  "voice.tapToRead": "Tap to read aloud",
+  "voice.stopReading": "Stop reading",
+  
+  "error.fillAllFields": "Please fill in all fields",
+  "error.invalidEmail": "Please provide a valid email address",
+  "error.passwordTooShort": "Password must be at least 8 characters long",
+  "error.passwordMismatch": "Passwords do not match",
+  "error.loginFailed": "Invalid email or password. Please try again.",
+  "error.signupFailed": "Failed to create account. Please try again.",
+  "error.networkError": "Network error. Please check your connection.",
+  
+  "success.accountCreated": "Your account has been created successfully",
+  "success.loginSuccess": "You have successfully logged in",
+  "success.welcomeBack": "Welcome back!",
+  
+  "language.select": "Select Language",
+  "language.current": "Current Language"
+}

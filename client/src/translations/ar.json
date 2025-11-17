@@ -1,0 +1,105 @@
+{
+  "app.name": "مساعد الصحة بالذكاء الاصطناعي",
+  "app.tagline": "شريكك في الصحة. الصحة. مبسطة",
+  
+  "nav.home": "الرئيسية",
+  "nav.chat": "محادثة",
+  "nav.symptoms": "الأعراض",
+  "nav.appointments": "المواعيد",
+  "nav.resources": "الموارد",
+  "nav.profile": "الملف الشخصي",
+  "nav.logout": "تسجيل الخروج",
+  
+  "landing.hero.title": "شريكك في الصحة.",
+  "landing.hero.subtitle": "الصحة. مبسطة",
+  "landing.hero.description": "اختبر الرعاية الصحية كما لم يحدث من قبل مع مساعد الصحة المدعوم بالذكاء الاصطناعي. احصل على رؤى صحية مخصصة، احجز المواعيد، وأدر رحلة العافية الخاصة بك - كل ذلك في مكان واحد.",
+  "landing.hero.getStarted": "ابدأ الآن",
+  "landing.hero.signIn": "تسجيل الدخول",
+  
+  "landing.features.title": "كل ما تحتاجه لصحة أفضل",
+  "landing.features.subtitle": "أدوات إدارة صحية شاملة مصممة لجعل رحلة الرعاية الصحية الخاصة بك سلسة وخالية من التوتر",
+  
+  "landing.feature.aiCompanion.title": "مساعد الصحة بالذكاء الاصطناعي",
+  "landing.feature.aiCompanion.description": "تحدث مع مساعدنا الذكي للحصول على إرشادات ودعم صحي فوري على مدار الساعة",
+  
+  "landing.feature.appointments.title": "مواعيد سهلة",
+  "landing.feature.appointments.description": "احجز وأدر المواعيد مع مقدمي الرعاية الصحية بسلاسة مع تذكيرات واتساب",
+  
+  "landing.feature.tracking.title": "تتبع الصحة",
+  "landing.feature.tracking.description": "راقب مقاييسك الصحية واحصل على رؤى مخصصة لتحسين عافيتك",
+  
+  "landing.feature.resources.title": "موارد صحية",
+  "landing.feature.resources.description": "الوصول إلى مكتبة من المقالات الصحية الموثوقة والنصائح والمحتوى التعليمي",
+  
+  "landing.feature.secure.title": "آمن وخاص",
+  "landing.feature.secure.description": "بياناتك الصحية مشفرة ومحمية بمعايير أمان رائدة في الصناعة",
+  
+  "landing.feature.family.title": "رعاية العائلة",
+  "landing.feature.family.description": "إدارة السجلات الصحية لعائلتك بأكملها من لوحة تحكم واحدة",
+  
+  "landing.cta.title": "هل أنت مستعد لتحويل رحلتك الصحية؟",
+  "landing.cta.subtitle": "انضم إلى آلاف المستخدمين الذين يثقون بنا لتلبية احتياجاتهم الصحية",
+  "landing.cta.button": "أنشئ حسابك المجاني",
+  
+  "landing.footer.copyright": "© 2024 مساعد الصحة بالذكاء الاصطناعي. جميع الحقوق محفوظة.",
+  
+  "auth.signup.title": "إنشاء حساب",
+  "auth.signup.subtitle": "انضم إلينا وابدأ رحلتك الصحية اليوم",
+  "auth.signup.fullName": "الاسم الكامل",
+  "auth.signup.email": "البريد الإلكتروني",
+  "auth.signup.password": "كلمة المرور",
+  "auth.signup.confirmPassword": "تأكيد كلمة المرور",
+  "auth.signup.passwordHint": "يجب أن تكون 8 أحرف على الأقل",
+  "auth.signup.button": "إنشاء حساب",
+  "auth.signup.hasAccount": "هل لديك حساب بالفعل؟",
+  "auth.signup.signInLink": "تسجيل الدخول",
+  "auth.signup.backToHome": "العودة إلى الصفحة الرئيسية",
+  
+  "auth.login.title": "مرحبا بعودتك",
+  "auth.login.subtitle": "سجل الدخول لمتابعة رحلتك الصحية",
+  "auth.login.email": "البريد الإلكتروني",
+  "auth.login.password": "كلمة المرور",
+  "auth.login.forgotPassword": "هل نسيت كلمة المرور؟",
+  "auth.login.rememberMe": "تذكرني",
+  "auth.login.button": "تسجيل الدخول",
+  "auth.login.orContinue": "أو تابع مع",
+  "auth.login.google": "جوجل",
+  "auth.login.facebook": "فيسبوك",
+  "auth.login.noAccount": "ليس لديك حساب؟",
+  "auth.login.signUpLink": "سجل",
+  "auth.login.backToHome": "العودة إلى الصفحة الرئيسية",
+  
+  "dashboard.greeting": "مرحبا بعودتك",
+  "dashboard.healthSummary": "ملخص صحتي",
+  "dashboard.healthSummary.description": "عرض النشاط الأخير",
+  "dashboard.bookAppointment": "حجز موعد",
+  "dashboard.bookAppointment.description": "جدولة زيارتك القادمة، احصل على تذكيرات عبر واتساب",
+  "dashboard.healthResources": "موارد صحية",
+  "dashboard.healthResources.description": "استكشف المقالات والنصائح",
+  "dashboard.symptomChecker": "فاحص الأعراض",
+  "dashboard.viewAppointments": "عرض المواعيد",
+  "dashboard.profileSettings": "إعدادات الملف الشخصي",
+  "dashboard.quickActions": "إجراءات سريعة",
+  "dashboard.talkToAI": "تحدث إلى مساعد الصحة بالذكاء الاصطناعي",
+  
+  "voice.listening": "الاستماع...",
+  "voice.speak": "اضغط للتحدث",
+  "voice.processing": "جاري المعالجة...",
+  "voice.tapToRead": "اضغط للقراءة بصوت عالٍ",
+  "voice.stopReading": "إيقاف القراءة",
+  
+  "error.fillAllFields": "يرجى ملء جميع الحقول",
+  "error.invalidEmail": "يرجى تقديم عنوان بريد إلكتروني صالح",
+  "error.passwordTooShort": "يجب أن تكون كلمة المرور 8 أحرف على الأقل",
+  "error.passwordMismatch": "كلمات المرور غير متطابقة",
+  "error.loginFailed": "البريد الإلكتروني أو كلمة المرور غير صالحة. يرجى المحاولة مرة أخرى.",
+  "error.signupFailed": "فشل إنشاء الحساب. يرجى المحاولة مرة أخرى.",
+  "error.networkError": "خطأ في الشبكة. يرجى التحقق من اتصالك.",
+  
+  "success.accountCreated": "تم إنشاء حسابك بنجاح",
+  "success.loginSuccess": "لقد قمت بتسجيل الدخول بنجاح",
+  "success.welcomeBack": "مرحبا بعودتك!",
+  
+  "language.select": "اختر اللغة",
+  "language.current": "اللغة الحالية"
+}

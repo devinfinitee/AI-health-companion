@@ -1,0 +1,105 @@
+{
+  "app.name": "एआई स्वास्थ्य साथी",
+  "app.tagline": "स्वास्थ्य में आपका साथी। स्वास्थ्य। सरल",
+  
+  "nav.home": "होम",
+  "nav.chat": "चैट",
+  "nav.symptoms": "लक्षण",
+  "nav.appointments": "अपॉइंटमेंट",
+  "nav.resources": "संसाधन",
+  "nav.profile": "प्रोफाइल",
+  "nav.logout": "लॉग आउट",
+  
+  "landing.hero.title": "स्वास्थ्य में आपका साथी।",
+  "landing.hero.subtitle": "स्वास्थ्य। सरल",
+  "landing.hero.description": "हमारे एआई-संचालित स्वास्थ्य साथी के साथ स्वास्थ्य सेवा का अनुभव पहले जैसा कभी नहीं करें। व्यक्तिगत स्वास्थ्य जानकारी प्राप्त करें, अपॉइंटमेंट बुक करें, और अपनी कल्याण यात्रा का प्रबंधन करें - सब एक ही जगह पर।",
+  "landing.hero.getStarted": "शुरू करें",
+  "landing.hero.signIn": "साइन इन करें",
+  
+  "landing.features.title": "बेहतर स्वास्थ्य के लिए आपको जो कुछ भी चाहिए",
+  "landing.features.subtitle": "व्यापक स्वास्थ्य प्रबंधन उपकरण जो आपकी स्वास्थ्य सेवा यात्रा को सहज और तनाव मुक्त बनाने के लिए डिज़ाइन किए गए हैं",
+  
+  "landing.feature.aiCompanion.title": "एआई स्वास्थ्य साथी",
+  "landing.feature.aiCompanion.description": "24/7 तत्काल स्वास्थ्य मार्गदर्शन और सहायता के लिए हमारे बुद्धिमान एआई सहायक के साथ चैट करें",
+  
+  "landing.feature.appointments.title": "आसान अपॉइंटमेंट",
+  "landing.feature.appointments.description": "व्हाट्सएप रिमाइंडर के साथ स्वास्थ्य सेवा प्रदाताओं के साथ अपॉइंटमेंट बुक करें और प्रबंधित करें",
+  
+  "landing.feature.tracking.title": "स्वास्थ्य ट्रैकिंग",
+  "landing.feature.tracking.description": "अपने स्वास्थ्य मेट्रिक्स की निगरानी करें और अपनी कल्याण में सुधार के लिए व्यक्तिगत जानकारी प्राप्त करें",
+  
+  "landing.feature.resources.title": "स्वास्थ्य संसाधन",
+  "landing.feature.resources.description": "विश्वसनीय स्वास्थ्य लेख, सुझाव और शैक्षिक सामग्री की लाइब्रेरी तक पहुंचें",
+  
+  "landing.feature.secure.title": "सुरक्षित और निजी",
+  "landing.feature.secure.description": "आपका स्वास्थ्य डेटा उद्योग-अग्रणी सुरक्षा मानकों के साथ एन्क्रिप्टेड और संरक्षित है",
+  
+  "landing.feature.family.title": "परिवार की देखभाल",
+  "landing.feature.family.description": "एक ही डैशबोर्ड से अपने पूरे परिवार के स्वास्थ्य रिकॉर्ड प्रबंधित करें",
+  
+  "landing.cta.title": "अपनी स्वास्थ्य यात्रा को बदलने के लिए तैयार हैं?",
+  "landing.cta.subtitle": "हजारों उपयोगकर्ताओं में शामिल हों जो अपनी स्वास्थ्य सेवा आवश्यकताओं के लिए हम पर भरोसा करते हैं",
+  "landing.cta.button": "अपना मुफ्त खाता बनाएं",
+  
+  "landing.footer.copyright": "© 2024 एआई स्वास्थ्य साथी। सर्वाधिकार सुरक्षित।",
+  
+  "auth.signup.title": "खाता बनाएं",
+  "auth.signup.subtitle": "हमसे जुड़ें और आज ही अपनी स्वास्थ्य यात्रा शुरू करें",
+  "auth.signup.fullName": "पूरा नाम",
+  "auth.signup.email": "ईमेल",
+  "auth.signup.password": "पासवर्ड",
+  "auth.signup.confirmPassword": "पासवर्ड की पुष्टि करें",
+  "auth.signup.passwordHint": "कम से कम 8 वर्ण लंबा होना चाहिए",
+  "auth.signup.button": "खाता बनाएं",
+  "auth.signup.hasAccount": "पहले से ही एक खाता है?",
+  "auth.signup.signInLink": "साइन इन करें",
+  "auth.signup.backToHome": "होम पर वापस जाएं",
+  
+  "auth.login.title": "वापसी पर स्वागत है",
+  "auth.login.subtitle": "अपनी स्वास्थ्य यात्रा जारी रखने के लिए साइन इन करें",
+  "auth.login.email": "ईमेल",
+  "auth.login.password": "पासवर्ड",
+  "auth.login.forgotPassword": "पासवर्ड भूल गए?",
+  "auth.login.rememberMe": "मुझे याद रखें",
+  "auth.login.button": "साइन इन करें",
+  "auth.login.orContinue": "या जारी रखें",
+  "auth.login.google": "गूगल",
+  "auth.login.facebook": "फेसबुक",
+  "auth.login.noAccount": "खाता नहीं है?",
+  "auth.login.signUpLink": "साइन अप करें",
+  "auth.login.backToHome": "होम पर वापस जाएं",
+  
+  "dashboard.greeting": "वापसी पर स्वागत है",
+  "dashboard.healthSummary": "मेरा स्वास्थ्य सारांश",
+  "dashboard.healthSummary.description": "हाल की गतिविधि देखें",
+  "dashboard.bookAppointment": "अपॉइंटमेंट बुक करें",
+  "dashboard.bookAppointment.description": "अगली यात्रा शेड्यूल करें, व्हाट्सएप के माध्यम से रिमाइंडर प्राप्त करें",
+  "dashboard.healthResources": "स्वास्थ्य संसाधन",
+  "dashboard.healthResources.description": "लेख और सुझाव देखें",
+  "dashboard.symptomChecker": "लक्षण जांचकर्ता",
+  "dashboard.viewAppointments": "अपॉइंटमेंट देखें",
+  "dashboard.profileSettings": "प्रोफाइल सेटिंग्स",
+  "dashboard.quickActions": "त्वरित क्रियाएं",
+  "dashboard.talkToAI": "अपने एआई स्वास्थ्य साथी से बात करें",
+  
+  "voice.listening": "सुन रहा है...",
+  "voice.speak": "बोलने के लिए टैप करें",
+  "voice.processing": "प्रोसेसिंग...",
+  "voice.tapToRead": "जोर से पढ़ने के लिए टैप करें",
+  "voice.stopReading": "पढ़ना बंद करें",
+  
+  "error.fillAllFields": "कृपया सभी फ़ील्ड भरें",
+  "error.invalidEmail": "कृपया एक वैध ईमेल पता प्रदान करें",
+  "error.passwordTooShort": "पासवर्ड कम से कम 8 वर्ण लंबा होना चाहिए",
+  "error.passwordMismatch": "पासवर्ड मेल नहीं खाते",
+  "error.loginFailed": "अमान्य ईमेल या पासवर्ड। कृपया पुनः प्रयास करें।",
+  "error.signupFailed": "खाता बनाने में विफल। कृपया पुनः प्रयास करें।",
+  "error.networkError": "नेटवर्क त्रुटि। कृपया अपना कनेक्शन जांचें।",
+  
+  "success.accountCreated": "आपका खाता सफलतापूर्वक बनाया गया है",
+  "success.loginSuccess": "आपने सफलतापूर्वक लॉग इन किया है",
+  "success.welcomeBack": "वापसी पर स्वागत है!",
+  
+  "language.select": "भाषा चुनें",
+  "language.current": "वर्तमान भाषा"
+}
