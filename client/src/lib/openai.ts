@@ -1,6 +1,6 @@
 /**
  * OPENAI API INTEGRATION
- * Handles communication with OpenAI API for AI health companion chat
+ * Handles communication with OpenAI API for Health Pal chat
  */
 
 // OpenAI API configuration
@@ -106,7 +106,7 @@ export async function sendChatMessage(
 export function createSystemMessage(): ChatMessage {
   return {
     role: "system",
-    content: `You are a helpful and empathetic AI health companion assistant. Your role is to:
+    content: `You are a helpful and empathetic Health Pal assistant. Your role is to:
 
 1. Provide general health information and wellness advice
 2. Help users understand their symptoms (but always recommend seeing a doctor for diagnosis)

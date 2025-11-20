@@ -1,5 +1,5 @@
 {
-  "app.name": "AI Health Companion",
+  "app.name": "Health Pal",
   "app.tagline": "Your Partner in Health. Health. Simplified",
   
   "nav.home": "Home",
@@ -19,7 +19,7 @@
   "landing.features.title": "Everything You Need for Better Health",
   "landing.features.subtitle": "Comprehensive health management tools designed to make your healthcare journey seamless and stress-free",
   
-  "landing.feature.aiCompanion.title": "AI Health Companion",
+  "landing.feature.aiCompanion.title": "Health Pal",
   "landing.feature.aiCompanion.description": "Chat with our intelligent AI assistant for instant health guidance and support 24/7",
   
   "landing.feature.appointments.title": "Easy Appointments",
@@ -41,7 +41,7 @@
   "landing.cta.subtitle": "Join thousands of users who trust us with their healthcare needs",
   "landing.cta.button": "Create Your Free Account",
   
-  "landing.footer.copyright": "© 2024 AI Health Companion. All rights reserved.",
+  "landing.footer.copyright": "© 2024 Health Pal. All rights reserved.",
   
   "auth.signup.title": "Create Account",
   "auth.signup.subtitle": "Join us and start your health journey today",
@@ -80,7 +80,7 @@
   "dashboard.viewAppointments": "View Appointments",
   "dashboard.profileSettings": "Profile Settings",
   "dashboard.quickActions": "Quick Actions",
-  "dashboard.talkToAI": "Talk to your AI Health Companion",
+  "dashboard.talkToAI": "Talk to your Health Pal",
   
   "voice.listening": "Listening...",
   "voice.speak": "Tap to speak",

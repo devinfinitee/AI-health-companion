@@ -1,6 +1,6 @@
 # StoryGenius Backend Server
 
-This is the backend API server for the StoryGenius AI Health Companion application.
+This is the backend API server for the StoryGenius Health Pal application.
 
 ## 🚀 Setup Instructions
 

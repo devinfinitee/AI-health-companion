@@ -9,9 +9,8 @@ import AnimatedPage from "@/components/AnimatedPage";
 import { motion } from "framer-motion";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useToast } from "@/hooks/use-toast";
-import { sendChatMessage, createSystemMessage, formatUserMessage, isOpenAIConfigured, ChatMessage } from "@/lib/openai";
 import { stt, tts } from "@/lib/speech";
-import { useAuth } from "@/contexts/AuthContext";
+import { post } from "@/lib/api";
 
 interface Message {
   id: string;
@@ -24,7 +23,6 @@ export default function Chat() {
   const [, setLocation] = useLocation();
   const { t, language } = useLanguage();
   const { toast } = useToast();
-  const { user } = useAuth();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -90,16 +88,6 @@ export default function Chat() {
   const handleSend = async () => {
     if (!input.trim() || isLoading) return;
 
-    // Check if OpenAI is configured
-    if (!isOpenAIConfigured()) {
-      toast({
-        title: "Configuration Required",
-        description: "Please add your OpenAI API key to the .env file",
-        variant: "destructive",
-      });
-      return;
-    }
-
     const userMessage: Message = {
       id: Date.now().toString(),
       type: "user",
@@ -113,18 +101,19 @@ export default function Chat() {
     setIsLoading(true);
 
     try {
-      // Prepare conversation history for OpenAI
-      const chatHistory: ChatMessage[] = [
-        createSystemMessage(),
-        ...messages.slice(1).map((msg) => ({
-          role: msg.type === "user" ? "user" as const : "assistant" as const,
-          content: msg.content,
-        })),
-        formatUserMessage(input),
-      ];
+      const history = messages.slice(1).map((msg) => ({
+        role: msg.type === "user" ? "user" : "assistant",
+        content: msg.content,
+      }));
 
-      // Get AI response
-      const aiResponseText = await sendChatMessage(chatHistory);
+      const res = await post("/chat", {
+        message: input,
+        history,
+        language,
+      });
+
+      const aiResponseText: string = res?.data?.reply ||
+        "I apologize, but I couldn't generate a response right now. Please try again.";
 
       const aiMessage: Message = {
         id: (Date.now() + 1).toString(),

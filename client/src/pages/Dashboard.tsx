@@ -194,6 +194,9 @@ export default function Dashboard() {
             <Button onClick={() => setLocation("/symptoms")} data-testid="button-symptom-checker">
               Symptom Checker
             </Button>
+            <Button onClick={() => setLocation("/chat")} data-testid="button-chat-ai">
+              Chat with AI
+            </Button>
             <Button onClick={() => setLocation("/appointments")} data-testid="button-view-appointments">
               View Appointments
             </Button>
@@ -214,7 +217,7 @@ export default function Dashboard() {
                 </AvatarFallback>
               </Avatar>
               <div>
-                <h3 className="font-medium text-[#2D3B6F] dark:text-foreground">AI Health Companion</h3>
+                <h3 className="font-medium text-[#2D3B6F] dark:text-foreground">Health Pal</h3>
               </div>
             </div>
             <div className="text-sm text-muted-foreground">

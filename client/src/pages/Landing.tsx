@@ -60,6 +60,14 @@ export default function Landing() {
           delay: 0.3,
           ease: "power3.out"
         });
+
+        gsap.to(heroImage, {
+          y: -10,
+          duration: 3,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut"
+        });
       }
 
       // Features animation
@@ -73,6 +81,15 @@ export default function Landing() {
           delay: 0.6,
           ease: "power3.out"
         });
+
+        gsap.to(featureCards, {
+          y: -6,
+          duration: 4,
+          repeat: -1,
+          yoyo: true,
+          ease: "sine.inOut",
+          stagger: 0.2
+        });
       }
     });
 
@@ -80,7 +97,7 @@ export default function Landing() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-b from-background via-blue-50/40 to-purple-50/40 dark:from-background dark:via-slate-950 dark:to-slate-950">
       {/* Language Selector - Fixed Position */}
       <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
         <LanguageSelector />
@@ -93,23 +110,27 @@ export default function Landing() {
 
       {/* Hero Section */}
       <div className="relative bg-gradient-to-br from-blue-100 via-purple-100 to-blue-200 dark:from-purple-950/30 dark:via-blue-950/30 dark:to-purple-950/30 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 py-16 md:py-24">
+        <div className="pointer-events-none absolute inset-0 opacity-60">
+          <div className="absolute -left-20 -top-40 h-72 w-72 rounded-full bg-purple-400/40 blur-3xl" />
+          <div className="absolute -right-24 top-20 h-80 w-80 rounded-full bg-blue-400/40 blur-3xl" />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-6 py-16 md:py-24">
           <div className="grid md:grid-cols-2 gap-12 items-center" ref={heroRef}>
             {/* Left Content */}
             <div>
-              <h1 className="font-heading font-bold text-[#2D3B6F] dark:text-primary text-5xl md:text-6xl mb-6 leading-tight">
+              <h1 className="font-heading font-bold text-[#1F2937] dark:text-primary text-5xl md:text-6xl mb-6 leading-tight tracking-tight">
                 {t("landing.hero.title")}
                 <br />
                 <span className="text-purple-600 dark:text-purple-400">{t("landing.hero.subtitle")}</span>
               </h1>
-              <p className="text-[#6B7280] dark:text-muted-foreground text-lg mb-8 leading-relaxed">
+              <p className="text-[#4B5563] dark:text-muted-foreground text-lg mb-8 leading-relaxed max-w-xl">
                 {t("landing.hero.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg"
                   onClick={() => setLocation("/signup")}
-                  className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700"
+                  className="text-lg px-8 py-6 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 shadow-lg shadow-blue-500/30"
                 >
                   {t("landing.hero.getStarted")}
                 </Button>
@@ -117,7 +138,7 @@ export default function Landing() {
                   size="lg"
                   variant="outline"
                   onClick={() => setLocation("/login")}
-                  className="text-lg px-8 py-6"
+                  className="text-lg px-8 py-6 bg-white/70 dark:bg-background/60 backdrop-blur border border-white/40 dark:border-border"
                 >
                   {t("landing.hero.signIn")}
                 </Button>
@@ -126,11 +147,16 @@ export default function Landing() {
 
             {/* Right Image */}
             <div className="relative flex justify-center md:justify-end">
-              <img 
-                src={doctorImage} 
-                alt="Healthcare professionals" 
-                className="w-full max-w-md rounded-2xl shadow-2xl"
-              />
+              <div className="relative w-full max-w-md">
+                <div className="absolute -inset-4 rounded-[2rem] bg-gradient-to-tr from-blue-500/40 via-purple-500/40 to-pink-400/40 blur-2xl" />
+                <div className="relative rounded-[2rem] bg-white/80 dark:bg-slate-950/80 backdrop-blur-xl shadow-2xl shadow-blue-500/20 border border-white/60 dark:border-slate-800 overflow-hidden">
+                  <img 
+                    src={doctorImage} 
+                    alt="Healthcare professionals" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -148,7 +174,7 @@ export default function Landing() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" ref={featuresRef}>
-          <Card className="feature-card hover-elevate border-0 shadow-lg">
+          <Card className="feature-card hover-elevate border border-white/70 dark:border-slate-800 bg-white/80 dark:bg-slate-950/60 backdrop-blur-xl shadow-lg shadow-blue-500/10 transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl">
             <CardContent className="pt-8 pb-6">
               <div className="flex justify-center mb-4">
                 <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-100 to-blue-200 dark:from-blue-900/20 dark:to-blue-800/20 flex items-center justify-center">
@@ -247,8 +273,12 @@ export default function Landing() {
       </div>
 
       {/* CTA Section */}
-      <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-16">
-        <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="relative bg-gradient-to-r from-blue-600 to-purple-600 py-16 overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 opacity-50">
+          <div className="absolute -right-32 -top-24 h-64 w-64 rounded-full bg-white/20 blur-3xl" />
+          <div className="absolute -left-24 bottom-0 h-56 w-56 rounded-full bg-purple-300/30 blur-3xl" />
+        </div>
+        <div className="relative max-w-4xl mx-auto px-6 text-center">
           <h2 className="font-heading font-bold text-white text-3xl md:text-4xl mb-4">
             {t("landing.cta.title")}
           </h2>

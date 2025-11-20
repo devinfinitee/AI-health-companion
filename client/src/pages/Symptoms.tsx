@@ -8,11 +8,18 @@ import { useLocation } from "wouter";
 import gsap from "gsap";
 import AnimatedPage from "@/components/AnimatedPage";
 import { motion } from "framer-motion";
+import { post } from "@/lib/api";
+import { useLanguage } from "@/contexts/LanguageContext";
+import VoiceAssistant from "@/components/VoiceAssistant";
 
 export default function Symptoms() {
   const [, setLocation] = useLocation();
+  const { language } = useLanguage();
   const [symptoms, setSymptoms] = useState("");
   const [analyzed, setAnalyzed] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const [aiReply, setAiReply] = useState<string | null>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
   const resultRef = useRef<HTMLDivElement>(null);
@@ -64,9 +71,25 @@ export default function Symptoms() {
     "Shortness of Breath",
   ];
 
-  const handleAnalyze = () => {
-    setAnalyzed(true);
-    console.log('Analyzing symptoms:', symptoms);
+  const handleAnalyze = async () => {
+    if (!symptoms) return;
+
+    setLoading(true);
+    setError(null);
+    setAiReply(null);
+
+    try {
+      const res = await post("/dashboard/symptoms", { symptoms, language });
+      const reply = res?.data?.reply || null;
+      setAiReply(reply);
+      setAnalyzed(true);
+    } catch (err: any) {
+      console.error("Failed to analyze symptoms:", err);
+      setError(err?.message || "Failed to analyze symptoms. Please try again.");
+      setAnalyzed(false);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const addSymptom = (symptom: string) => {
@@ -97,6 +120,17 @@ export default function Symptoms() {
               data-testid="input-symptoms"
             />
 
+            <div className="flex justify-between items-center mb-4">
+              <p className="text-xs text-muted-foreground">
+                You can speak your symptoms or type them above.
+              </p>
+              <VoiceAssistant
+                sttOnly
+                onSpeechRecognized={(text) => setSymptoms((prev) => (prev ? `${prev}, ${text}` : text))}
+                size="sm"
+              />
+            </div>
+
             <div className="mb-4">
               <p className="text-sm text-muted-foreground mb-2">Common symptoms:</p>
               <div className="flex flex-wrap gap-2">
@@ -117,32 +151,34 @@ export default function Symptoms() {
             <Button
               onClick={handleAnalyze}
               className="w-full"
-              disabled={!symptoms}
+              disabled={!symptoms || loading}
               data-testid="button-analyze-symptoms"
             >
-              Analyze Symptoms
+              {loading ? "Analyzing..." : "Analyze Symptoms"}
             </Button>
           </CardContent>
         </Card>
 
-        {analyzed && (
+        {error && (
+          <Card className="border-destructive/20 bg-destructive/5 mb-4">
+            <CardContent className="pt-4 pb-4 text-sm text-destructive">
+              {error}
+            </CardContent>
+          </Card>
+        )}
+
+        {analyzed && aiReply && (
           <Card className="border-primary/20 bg-primary/5" ref={resultRef}>
             <CardContent className="pt-6">
               <div className="flex gap-3">
                 <AlertCircle className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
                 <div>
                   <h3 className="font-heading font-semibold mb-2">AI Assessment</h3>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Based on your symptoms, it's recommended to consult with a healthcare
-                    professional. Your symptoms may require medical attention.
-                  </p>
-                  <div className="space-y-2">
-                    <p className="text-sm font-medium">Recommended next steps:</p>
-                    <ul className="text-sm text-muted-foreground list-disc list-inside space-y-1">
-                      <li>Schedule an appointment with a doctor</li>
-                      <li>Monitor your symptoms</li>
-                      <li>Stay hydrated and rest</li>
-                    </ul>
+                  <div className="mb-3">
+                    <VoiceAssistant textToRead={aiReply} ttsOnly size="sm" />
+                  </div>
+                  <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground whitespace-pre-wrap mb-4">
+                    {aiReply}
                   </div>
                   <Button
                     onClick={() => setLocation("/book-appointment")}
