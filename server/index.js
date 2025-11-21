@@ -23,7 +23,7 @@ const PORT = process.env.PORT || 5001;
 
 // Enable CORS (Cross-Origin Resource Sharing) to allow frontend to communicate with backend
 app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5000", "https://yourhealthpal.vercel.app/", "https://healthpal-yw70.onrender.com"], // Allow both Vite ports
+  origin: ["http://localhost:5173", "http://localhost:5000", "https://yourhealthpal.vercel.app", "https://healthpal-yw70.onrender.com"], // Allow both Vite ports
   credentials: true, // Allow cookies and authentication headers,
   method: ["GET", "POST", "PUT", "DELETE", "OPTIONS"]
 }));
